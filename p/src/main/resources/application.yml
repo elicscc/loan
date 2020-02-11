@@ -1,0 +1,54 @@
+spring:
+  profiles:
+    active: test
+---
+
+---
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  profiles: test
+  jackson:
+    default-property-inclusion: NON_NULL
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///p2p?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+  freemarker:
+    allow-request-override: false
+    cache: false
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html; charset=utf-8
+    expose-session-attributes: true
+    suffix: .ftl
+    template-loader-path: classpath:/WEB-INF/views/
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.xmg.website
+  configuration:
+    map-underscore-to-camel-case: true
+mail:
+  hostUrl: http://localhost:8080/
+  host: 127.0.0.1
+  username: Admin@xmg.com
+  password: 1111
+aop:
+  proxy-target-class: false
+sms:
+  username: root
+  password: 111
+  apikey: 1111
+  url: http://localhost:8082/send.do
+db:
+  timeout: 124654
+
+
