@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 个人中心
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Administrator
  * 
  */
-//@Controller
+@Controller
 public class PersonalController {
 
 	@Autowired
@@ -86,7 +87,7 @@ public class PersonalController {
 			model.addAttribute("success", true);
 		} catch (RuntimeException re) {
 			model.addAttribute("success", false);
-			System.out.println(re.getMessage());
+			//System.out.println(re.getMessage());
 			model.addAttribute("msg", re.getMessage());
 		}
 		return "checkmail_result";

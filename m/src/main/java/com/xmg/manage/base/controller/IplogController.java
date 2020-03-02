@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.xmg.manage.base.query.IplogQueryObject;
 import com.xmg.manage.base.service.IIplogService;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 后台查询登陆日志controller

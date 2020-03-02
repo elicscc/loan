@@ -42,8 +42,8 @@ public class RealAuthController {
 		if (current.getIsRealAuth()) {
 			// 根据userinfo上的realAuthId得到实名认证对象,并放到model;
 			RealAuth ra = this.realAuthService.get(current.getRealAuthId());
-			System.out.println(ra.getRealName());
-			System.out.println(ra.getIdNumber());
+			//System.out.println(ra.getRealName());
+			//System.out.println(ra.getIdNumber());
 			model.addAttribute("realAuth", ra);
 			// auditing=false
 			model.addAttribute("auditing", false);

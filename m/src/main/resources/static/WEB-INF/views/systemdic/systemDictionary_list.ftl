@@ -73,7 +73,7 @@
 				</div>
 				<div class="row">
 					<!-- 提交分页的表单 -->
-					<form id="searchForm" class="form-inline" method="post" action="/systemDictionary_list.do">
+					<form id="searchForm" class="form-inline" method="post" action="/systemDictionary_list">
 						<input type="hidden" name="currentPage" id="currentPage" value=""/>
 						<div class="form-group">
 						</div>
@@ -125,7 +125,7 @@
 	        <h4 class="modal-title">编辑/增加</h4>
 	      </div>
 	      <div class="modal-body">
-	      		<form id="editForm" class="form-horizontal" method="post" action="/systemDictionary_update.do" style="margin: -3px 118px">
+	      		<form id="editForm" class="form-horizontal" method="post" action="/systemDictionary_update" style="margin: -3px 118px">
 			    <input id="systemDictionaryId" type="hidden" name="id" value="" />
 			   	<div class="form-group">
 				    <label class="col-sm-2 control-label">名称</label>

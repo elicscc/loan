@@ -12,6 +12,7 @@ import com.xmg.manage.base.domain.SystemDictionaryItem;
 import com.xmg.manage.base.query.SystemDictionaryQueryObject;
 import com.xmg.manage.base.service.ISystemDictionaryService;
 import com.xmg.manage.base.util.JSONResult;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 数据字典相关
@@ -35,6 +36,8 @@ public class SystemDictionaryController {
 	@RequestMapping("systemDictionary_list")
 	public String systemDictionaryList(
 			@ModelAttribute("qo") SystemDictionaryQueryObject qo, Model model) {
+
+		//System.err.println("进入了s");
 		model.addAttribute("pageResult",
 				this.systemDictionaryService.queryDics(qo));
 		return "systemdic/systemDictionary_list";

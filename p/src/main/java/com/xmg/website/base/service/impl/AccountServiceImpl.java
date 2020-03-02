@@ -48,7 +48,7 @@ public class AccountServiceImpl implements IAccountService {
 		List<Account> accounts = this.accountMapper.selectAll();
 		for (Account account : accounts) {
 			if (!account.checkVerifyCode()) {
-				System.out.println("账户:" + account.getId() + " 资金异常!");
+				//System.out.println("账户:" + account.getId() + " 资金异常!");
 			}
 		}
 	}

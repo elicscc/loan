@@ -86,7 +86,7 @@
 				</div>
 				<div class="col-sm-12">
 					<!-- 提交分页的表单 -->
-					<form id="searchForm" class="form-inline" method="post" action="/systemDictionaryItem_list.do">
+					<form id="searchForm" class="form-inline" method="post" action="/systemDictionaryItem_list">
 						<input type="hidden" id="currentPage" name="currentPage" value="${(qo.currentPage)!1}"/>
 						<input type="hidden" id="parentId" name="parentId" value='${(qo.parentId)!""}' />
 						<div class="form-group">
@@ -152,7 +152,7 @@
 	        <h4 class="modal-title">编辑/增加</h4>
 	      </div>
 	      <div class="modal-body">
-	       	  <form id="editForm" class="form-horizontal" method="post" action="systemDictionaryItem_update.do" style="margin: -3px 118px">
+	       	  <form id="editForm" class="form-horizontal" method="post" action="systemDictionaryItem_update" style="margin: -3px 118px">
 				    <input id="systemDictionaryId" type="hidden" name="id" value="" />
 			    	<input type="hidden" id="editFormParentId" name="parentId" value="" />
 				   	<div class="form-group">

@@ -14,6 +14,7 @@ import com.xmg.manage.base.query.VedioAuthQueryObject;
 import com.xmg.manage.base.service.IUserinfoService;
 import com.xmg.manage.base.service.IVedioAuthService;
 import com.xmg.manage.base.util.JSONResult;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 视频认证Controller

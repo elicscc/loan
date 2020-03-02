@@ -6,7 +6,9 @@ import com.xmg.website.business.service.IBidRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 网站首页
@@ -20,10 +22,12 @@ public class IndexController {
 	@Autowired
 	private IBidRequestService bidRequestService;
 
-	@RequestMapping("index")
+	@PostMapping("index")
 	public String index(Model model) {
 		// bidRequests
+		//System.err.println("进入index");
 		model.addAttribute("bidRequests", this.bidRequestService.listIndex(5));
+		//System.err.println("出了model");
 		return "main";
 	}
 

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Administrator
  * 
  */
-//@Controller
+@Controller
 public class BorrowController {
 
 	@Autowired

@@ -97,7 +97,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
 					.append(BidConst.VERIFYEMAIL_VAILDATE_DAY).append("天");
 
 			try {
-				// System.out.println("发送邮件:" + email + "邮件内容:" + content);
+				// //System.out.println("发送邮件:" + email + "邮件内容:" + content);
 				mailService.sendMail(email, "邮箱验证邮件", content.toString());
 				// 构造一个MailVerify对象;
 				MailVerify mv = new MailVerify();
@@ -151,7 +151,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
 		if (!old.getIsBasicInfo()) {
 			old.addState(BitStatesUtils.OP_BASIC_INFO);
 		}
-		System.out.println("UserinfoServiceImpl.updateBasicInfo()--------"+old.getId());
+		//System.out.println("UserinfoServiceImpl.updateBasicInfo()--------"+old.getId());
 		this.update(old);
 	}
 

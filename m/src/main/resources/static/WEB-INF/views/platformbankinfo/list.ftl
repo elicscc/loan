@@ -73,7 +73,7 @@
 				</div>
 				<div class="row">
 					<!-- 提交分页的表单 -->
-					<form id="searchForm" class="form-inline" method="post" action="/companyBank_list.do">
+					<form id="searchForm" class="form-inline" method="post" action="/companyBank_list">
 						<input type="hidden" name="currentPage" value=""/>
 						<div class="form-group">
 							<button id="query" class="btn btn-success"><i class="icon-search"></i> 查询</button>
@@ -122,7 +122,7 @@
 	        <h4 class="modal-title">编辑/增加</h4>
 	      </div>
 	      <div class="modal-body">
-       		<form id="editForm" class="form-horizontal" method="post" action="/companyBank_update.do" style="margin: -3px 118px">
+       		<form id="editForm" class="form-horizontal" method="post" action="/companyBank_update" style="margin: -3px 118px">
 			    <input type="hidden" name="id" value="" />
 			   	<div class="form-group">
 				    <label class="col-sm-3 control-label">选择银行</label>

@@ -45,7 +45,7 @@
 			form.ajaxSubmit(function(data){
 				if(data.success){
 					$.messager.confirm("提示","审核成功!",function(){
-						window.location.href="/vedioAuth.do";
+						window.location.href="/vedioAuth";
 					});
 				}else{
 					$.messager.alert("提示",data.msg);					
@@ -68,7 +68,7 @@
 				$.ajax({
 					dataType:"json",
 					type:"POST",
-					url:"vedioAuth_autocomplate.do",
+					url:"vedioAuth_autocomplate",
 					data:{keyword:query},
 					success:function(data){//这个data就是一个json对象的数组{id:xx,username:xxxx}
 						if(data && data.length){
@@ -104,7 +104,7 @@
 				<div class="row">
 					<!-- 提交分页的表单 -->
 					<form id="searchForm" class="form-inline" method="post"
-						action="/vedioAuth.do">
+						action="/vedioAuth">
 						<input type="hidden" name="currentPage" value="" />
 						<div class="form-group">
 							<label>状态</label> <select class="form-control" name="state">
@@ -178,7 +178,7 @@
 				</div>
 				<div class="modal-body">
 					<form id="editForm" class="form-horizontal" method="post"
-						action="/vedioAuth_audit.do">
+						action="/vedioAuth_audit">
 						<input type="hidden" name="state" value="" />
 						<div class="form-group">
 							<label class="col-sm-2 control-label">用户</label>

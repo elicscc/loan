@@ -32,7 +32,7 @@
 							绑定银行卡
 						</div>
 						<#if userinfo.isRealAuth>
-						<form class="form-horizontal" id="bankForm" method="post" action="/bankInfo_save.do" novalidate="novalidate">
+						<form class="form-horizontal" id="bankForm" method="post" action="/bankInfo_save" novalidate="novalidate">
 							<fieldset>
 								<div class="form-group">
 									<p class="text-center text-danger">为保护您账户安全，绑定银行卡之后，不能自己修改，请认真填写！</p>

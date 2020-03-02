@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.xmg.manage.base.domain.Logininfo;
 import com.xmg.manage.base.service.ILogininfoService;
 import com.xmg.manage.base.util.JSONResult;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 后台登陆
@@ -52,6 +53,8 @@ public class LoginController {
 	 */
 	@RequestMapping("index")
 	public String index() {
+
+		//System.out.println("进入了index");
 		return "main";
 	}
 }

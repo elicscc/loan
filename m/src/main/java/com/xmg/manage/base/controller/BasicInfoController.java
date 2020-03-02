@@ -4,11 +4,13 @@ import com.xmg.manage.base.domain.Userinfo;
 import com.xmg.manage.base.service.ISystemDictionaryService;
 import com.xmg.manage.base.service.IUserinfoService;
 import com.xmg.manage.base.util.JSONResult;
+import com.xmg.manage.base.util.RequireLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 用户个人资料填写
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Administrator
  * 
  */
-//@Controller
+@Controller
 public class BasicInfoController {
 	
 	@Autowired
@@ -25,7 +27,7 @@ public class BasicInfoController {
 	@Autowired
 	private ISystemDictionaryService systemDictionaryService;
 	
-	////@RequireLogin
+	@RequireLogin
 	@RequestMapping("basicInfo")
 	public String basicInfo(Model model){
 		//添加:当前用户;
@@ -39,7 +41,7 @@ public class BasicInfoController {
 		return "userInfo";
 	}
 	
-	//@RequireLogin
+	@RequireLogin
 	@RequestMapping("basicInfo_save")
 	@ResponseBody
 	public JSONResult basicInfoSave(Userinfo userinfo){

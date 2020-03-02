@@ -50,7 +50,7 @@
 				</div>
 				<!-- 功能页面 -->
 				<div class="col-sm-9">
-					<form action="/ipLog.do" name="searchForm" id="searchForm" class="form-inline" method="post">
+					<form action="/ipLog" name="searchForm" id="searchForm" class="form-inline" method="post">
 						<input type="hidden" id="currentPage" name="currentPage" value="" />
 						<div class="form-group">
 							<label>时间范围</label>

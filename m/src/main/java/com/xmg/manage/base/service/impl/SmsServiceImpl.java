@@ -25,12 +25,11 @@ public class SmsServiceImpl implements ISmsService,
 	}
 
 	private void sendSms(RechargeOffline ro) {
-		System.out.println("充值成功发送短信");
+		//System.out.println("充值成功发送短信");
 	}
 
 	private void sendSms(RealAuth realAuth) {
-		System.out.println("用户" + realAuth.getApplier().getUsername()
-				+ " 实名认证成功,发送短信");
+		//System.out.println("用户" + realAuth.getApplier().getUsername()+ " 实名认证成功,发送短信");
 	}
 
 }

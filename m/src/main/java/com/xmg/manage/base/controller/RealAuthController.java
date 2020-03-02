@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.xmg.manage.base.query.RealAuthQueryObject;
 import com.xmg.manage.base.service.IRealAuthService;
 import com.xmg.manage.base.util.JSONResult;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 实名认证审核相关

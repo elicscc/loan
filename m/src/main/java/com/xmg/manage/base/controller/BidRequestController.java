@@ -20,9 +20,9 @@ import com.xmg.manage.base.util.JSONResult;
  * 借款相关controller
  * 
  * @author Administrator
- * 
+ *
  */
-//@Controller
+@Controller
 public class BidRequestController {
 
 	@Autowired

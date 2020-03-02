@@ -76,7 +76,7 @@
 				<div class="page-header">
 					<h3>用户提现审核管理</h3>
 				</div>
-				<form id="searchForm" class="form-inline" method="post" action="/moneyWithdraw.do">
+				<form id="searchForm" class="form-inline" method="post" action="/moneyWithdraw">
 					<input type="hidden" id="currentPage" name="currentPage" value=""/>
 					<div class="form-group">
 					    <label>状态</label>
@@ -139,7 +139,7 @@
 		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
 		      <div class="modal-body">
-		      	<form class="form-horizontal" id="editform" method="post" action="/moneyWithdraw_audit.do">
+		      	<form class="form-horizontal" id="editform" method="post" action="/moneyWithdraw_audit">
 					<fieldset>
 						<div id="legend" class="">
 							<legend>提现申请审核</legend>

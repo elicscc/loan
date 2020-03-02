@@ -39,7 +39,7 @@
 						</div>
 					</div>
 					<div class="row">
-					  <form method="POST" action="/userFile_selectType.do" id="editForm">
+					  <form method="POST" action="/userFile_selectType" id="editForm">
 					  <#list userFiles as file>
 					  <div class="col-sm-6 col-md-4">
 					    <div class="thumbnail">

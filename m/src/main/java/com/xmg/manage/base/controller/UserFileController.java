@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.xmg.manage.base.query.UserFileQueryObject;
 import com.xmg.manage.base.service.IUserFileService;
 import com.xmg.manage.base.util.JSONResult;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 风控资料审核

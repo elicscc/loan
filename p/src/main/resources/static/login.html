@@ -39,7 +39,7 @@
 				$(form).ajaxSubmit(function(data){
 					if(data.success){
 						$.messager.confirm("提示","登录成功,点击确认跳转个人中心!",function(){
-							window.location.href="/personal.do";
+							window.location.href="/personal";
 						});
 					}else{
 						$.messager.popup(data.msg);
@@ -80,7 +80,7 @@
 	
 	<!-- 网页内容 --> 
 	<div class="container">  
-		<form id="loginForm" class="form-horizontal el-login-form" action="/login.do" method="post" >
+		<form id="loginForm" class="form-horizontal el-login-form" action="/login" method="post" >
 			<p class="h4" style="margin: 10px 10px 20px 110px;color:#999;">请输入用户名和密码</p> 
 			<div class="form-group">
 				<label class="control-label col-sm-2">用户名</label>
@@ -121,7 +121,7 @@
 						：粤ICP备字1504547</a>
 				</p>
 				<p>
-					<a href="http://www.gzjd.gov.cn/wlaqjc/open/validateSite.do" style="color: #ffffff">穗公网安备：44010650010086</a>
+					<a href="http://www.gzjd.gov.cn/wlaqjc/open/validateSite" style="color: #ffffff">穗公网安备：44010650010086</a>
 				</p>
 			</div>
 			<div class="right">

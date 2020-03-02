@@ -48,7 +48,7 @@
 				<div class="page-header">
 					<h3>登录日志查询</h3>
 				</div>
-				<form id="searchForm" class="form-inline" method="post" action="/ipLog.do">
+				<form id="searchForm" class="form-inline" method="post" action="/ipLog">
 					<input type="hidden" id="currentPage" name="currentPage" value="1"/>
 					<div class="form-group">
 					    <label>状态</label>

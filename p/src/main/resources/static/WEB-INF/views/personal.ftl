@@ -22,7 +22,7 @@
 						_this.attr("disabled",true);
 						//1,发送一个Ajax请求;
 						$.ajax({
-							url:"/sendVerifyCode.do",
+							url:"/sendVerifyCode",
 							dataType:"json",
 							type:"POST",
 							data:{phoneNumber:$("#phoneNumber").val()},
@@ -110,8 +110,8 @@
 									<p>最后登录时间：2015-01-25 15:30:10</p>
 								</div>
 								<div class="pull-left" style="text-align: center;width: 400px;margin:30px auto 0px auto;">
-									<a class="btn btn-primary btn-lg" href="/recharge.do">账户充值</a>
-									<a class="btn btn-danger btn-lg" href="/moneyWithdraw.do">账户提现</a>
+									<a class="btn btn-primary btn-lg" href="/recharge">账户充值</a>
+									<a class="btn btn-danger btn-lg" href="/moneyWithdraw">账户提现</a>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -152,12 +152,12 @@
 												<#if userinfo.isRealAuth >
 												<p>
 													已认证
-													<a href="/realAuth.do">查看</a>
+													<a href="/realAuth">查看</a>
 												</p>
 												<#else>
 												<p>
 													未认证
-													<a href="/realAuth.do" id="">立刻绑定</a>
+													<a href="/realAuth" id="">立刻绑定</a>
 												</p>
 												</#if>
 											</div>
@@ -246,7 +246,7 @@
 			<h4 class="modal-title" id="exampleModalLabel">绑定手机</h4>
 		      </div>
 		      <div class="modal-body">
-				<form class="form-horizontal" id="bindPhoneForm" method="post" action="/bindPhone.do">
+				<form class="form-horizontal" id="bindPhoneForm" method="post" action="/bindPhone">
 					<div class="form-group">
 						    <label for="phoneNumber" class="col-sm-2 control-label">手机号:</label>
 						    <div class="col-sm-4">
@@ -281,7 +281,7 @@
 			<h4 class="modal-title" id="exampleModalLabel">绑定邮箱</h4>
 		      </div>
 		      <div class="modal-body">
-				<form class="form-horizontal" id="bindEmailForm" method="post" action="/sendEmail.do">
+				<form class="form-horizontal" id="bindEmailForm" method="post" action="/sendEmail">
 					<div class="form-group">
 					    <label for="email" class="col-sm-2 control-label">Email:</label>
 					    <div class="col-sm-4">

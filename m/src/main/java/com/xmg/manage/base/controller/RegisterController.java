@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Administrator
  * 
  */
-//@Controller
+@Controller
 public class RegisterController {
 
 	@Autowired
@@ -41,17 +42,19 @@ public class RegisterController {
 		return !this.logininfoService.checkUsername(username);
 	}
 
-	@RequestMapping("login")
-	@ResponseBody
-	public JSONResult login(String username, String password,
-                            HttpServletRequest request) {
-		JSONResult json = new JSONResult();
-		Logininfo current = logininfoService.login(username, password,
-				request.getRemoteAddr(), Logininfo.USER_CLIENT);
-		if (current == null) {
-			json.setSuccess(false);
-			json.setMsg("用户名或者密码错误!");
-		}
-		return json;
-	}
+
+
+//	@RequestMapping("login")
+//	@ResponseBody
+//	public JSONResult login(String username, String password,
+//                            HttpServletRequest request) {
+//		JSONResult json = new JSONResult();
+//		Logininfo current = logininfoService.login(username, password,
+//				request.getRemoteAddr(), Logininfo.USER_CLIENT);
+//		if (current == null) {
+//			json.setSuccess(false);
+//			json.setMsg("用户名或者密码错误!");
+//		}
+//		return json;
+//	}
 }

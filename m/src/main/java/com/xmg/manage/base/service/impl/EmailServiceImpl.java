@@ -16,8 +16,7 @@ public class EmailServiceImpl implements IEmailService,
 	}
 
 	private void sendEmail(RealAuth realAuth) {
-		System.out.println("用户" + realAuth.getApplier().getUsername()
-				+ " 实名认证成功,发送邮件");
+		//System.out.println("用户" + realAuth.getApplier().getUsername()+ " 实名认证成功,发送邮件");
 	}
 
 }

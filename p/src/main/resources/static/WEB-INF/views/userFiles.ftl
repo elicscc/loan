@@ -30,7 +30,7 @@
 					fileTypeDesc:"风控资料文件",
 					fileTypeExts:"*.gif; *.jpg; *.png",
 					swf:"/js/plugins/uploadify/uploadify.swf",
-					uploader:"/userFileUpload.do;jsessionid=${sessionid}",//session的问题
+					uploader:"/userFileUpload;jsessionid=${sessionid}",//session的问题
 					overrideEvents:["onQueueComplete"],
 					onQueueComplete:function(){
 						window.location.reload();

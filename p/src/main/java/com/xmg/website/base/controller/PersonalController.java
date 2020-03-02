@@ -86,7 +86,7 @@ public class PersonalController {
 			model.addAttribute("success", true);
 		} catch (RuntimeException re) {
 			model.addAttribute("success", false);
-			System.out.println(re.getMessage());
+			//System.out.println(re.getMessage());
 			model.addAttribute("msg", re.getMessage());
 		}
 		return "checkmail_result";

@@ -62,7 +62,7 @@ public class RealAuthServiceImpl implements IRealAuthService {
 			this.realAuthMapper.insert(realAuth,key);
 			// 把实名认证的id设置给userinfo
 			current.setRealAuthId(realAuth.getId());
-			//System.err.println(realAuth.getId());
+			////System.err.println(realAuth.getId());
 			this.userinfoService.update(current);
 		}
 	}
