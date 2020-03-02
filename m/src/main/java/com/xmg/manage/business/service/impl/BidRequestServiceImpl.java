@@ -243,7 +243,12 @@ public class BidRequestServiceImpl implements IBidRequestService,
 				&& currentAccount.getUsableAmount().compareTo(amount) >= 0// 4,当前用户账户余额>=投标金额;
 				&& amount.compareTo(br.getMinBidAmount()) >= 0// 5,投标金额>=最小投标金额;
 				&& amount.compareTo(br.getRemainAmount()) <= 0// 6,投标金额<=借款剩余投标金额;
+
 		) {
+//7最后一次投标需要一次投满
+			if((br.getRemainAmount().subtract(amount)).compareTo(br.getMinBidAmount()) < 0){
+				throw new RuntimeException("最后一次投标需投满！");
+			}
 			// 执行投标操作
 			// 1,创建一个投标对象;设置相关属性;
 			Bid bid = new Bid();
