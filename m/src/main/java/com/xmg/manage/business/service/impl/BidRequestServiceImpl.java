@@ -246,7 +246,9 @@ public class BidRequestServiceImpl implements IBidRequestService,
 
 		) {
 //7最后一次投标需要一次投满
-			if((br.getRemainAmount().subtract(amount)).compareTo(br.getMinBidAmount()) < 0){
+
+			if(amount.compareTo(br.getRemainAmount()) < 0
+					&&(br.getRemainAmount().subtract(amount)).compareTo(br.getMinBidAmount()) < 0){
 				throw new RuntimeException("最后一次投标需投满！");
 			}
 			// 执行投标操作
